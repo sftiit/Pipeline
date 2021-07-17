@@ -17,6 +17,7 @@ node(){
     stage('Build') {
         nodejs('nodejs') {
             sh 'npm run build'
+            sh 'npm audit fix'
             echo "Build completed"
         }
         
