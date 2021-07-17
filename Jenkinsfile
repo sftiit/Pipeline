@@ -15,6 +15,14 @@ node(){
         }
         
     }
+  
+    //run lint
+    stage('Run NPM lint code quality') {
+        echo "Run NPM lint code quality"
+        sh 'npm run-script lint'
+        echo "ends NPM lint code quality check"
+    }
+  
     //compile the project
     stage('Build') {
         nodejs('nodejs') {
