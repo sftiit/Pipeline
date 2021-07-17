@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    console.log('Jenkins/EC2 Master/Slave Pipeline');
   }
   title = 'promise';
+  imagePath: string = "./assets/images/jenkins_build.PNG";
 
   public returnPromise(){
     new Promise((resolve) => {
