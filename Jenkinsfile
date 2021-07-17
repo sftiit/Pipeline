@@ -24,13 +24,14 @@ node(){
         }   
     }
   
-    //run lint
+    //run lint - use eslint sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
+    /*
     stage('Run NPM lint code quality') {
         echo "Run NPM lint code quality"
         sh 'npm lint'
         echo "ends NPM lint code quality check"
     }
-  
+    */
     //archive whatever in dist/promise to a tar file
     stage('Package Build') {
         sh "tar -zcvf bundle.tar.gz dist/promise/"
