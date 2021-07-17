@@ -4,11 +4,13 @@
 node(){
     stage('Cloning Git') {
         checkout scm
+        echo "Checkout was done!"
     }
     //check Jenkins Global Config.;     
     stage('Install dependencies') {
         nodejs('nodejs') {
-            sh 'npm install'ha
+            echo "Installing node_modules"
+            sh 'npm install'
             echo "Modules installed"
         }
         
@@ -17,7 +19,6 @@ node(){
     stage('Build') {
         nodejs('nodejs') {
             sh 'npm run build'
-            sh 'npm audit fix'
             echo "Build completed"
         }
         
